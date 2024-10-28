@@ -1,0 +1,354 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: #1b1b2f;
+    overflow-x: hidden;
+    /* padding-top: 30px; */
+  }
+
+  /* Additional CSS for header */
+  .header {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-family: 'Bungee Shade', sans-serif;
+    font-size: 3rem;
+    color: #ffdf00;
+    text-shadow: 
+        1px 1px 0px #ff004c,
+        2px 2px 0px #000,
+        3px 3px 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    padding: 15px;
+    gap: 10px; /* Space between text and image */
+    overflow: hidden; /* Hides content that overflows the container */
+    white-space: nowrap; /* Prevents text wrapping */
+    background: linear-gradient(45deg, #4b0082, #8a2be2, #1e90ff, #ffd700);
+    border: 5px solid #ffdf00; /* Adds a yellow border around the header */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+} 
+
+.scroll-container {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Bungee Shade', sans-serif;
+    font-size: 3rem;
+    color: #ffdf00;
+    text-shadow: 
+        1px 1px 0px #ff004c,
+        2px 2px 0px #000,
+        3px 3px 5px rgba(0, 0, 0, 0.5);
+    gap: 10px;
+    animation: scroll 10s linear infinite; /* Controls the speed and looping of the animation */
+}
+
+.header-logo {
+    height: 100px; /* Adjusts the image height to match the font size */
+    width: auto; /*Keeps the aspect ratio */
+    text-align: center;  
+    align-items: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start from right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to left and reappear */
+    }
+}
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(34, 12, 64, 0.9), rgba(0, 0, 0, 0.8)), url('casino-background.jpg') center/cover no-repeat;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background: radial-gradient(circle, rgba(255, 0, 76, 0.3), transparent); */
+    z-index: 2;
+    animation: pulse 5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    color: white; /* Text color */
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    color: #ffdf00;
+    text-shadow: 2px 2px 8px #000, 0px 0px 15px #ff004c;
+  }
+  
+  .subheading {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #fff;
+    opacity: 0.8;
+  }
+  
+  .play-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff004c, #ff8e00);
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 0, 76, 0.5);
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff004c, 0 0 30px #ff8e00;
+  }
+  
+  /* Game Gallery Section */
+  .game-gallery {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    background: #0d0d1a;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #ffdf00;
+    text-shadow: 0 0 10px #ff004c;
+    padding-top: 10px;
+    background: linear-gradient(45deg, #4b0082, #8a2be2, #1e90ff, #ffd700);
+  }
+  
+  .game-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #ff004c; /* Neon border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #ff004c, 0 0 20px rgba(255, 0, 76, 0.5);
+  }
+  
+  .game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff004c, 0 0 30px rgba(255, 0, 76, 0.8);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: auto;
+    /* filter: blur(3px); Adding blur effect to the image */
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+  
+  .game-card:hover img {
+    filter: blur(1px); /* Reducing blur on hover for a focused effect */
+    transform: scale(1.1);
+  }
+  
+  .badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(45deg, #ff004c, #ff8e00);
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(255, 0, 76, 0.3);
+  }
+
+  .whatsapp-icon {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: transform 0.3s;
+  }
+  
+  .whatsapp-icon.left-icon {
+    left: 20px;
+  }
+  
+  .whatsapp-icon.right-icon {
+    right: 20px;
+  }
+  
+  .whatsapp-icon-box {
+    width: 120px; /* Adjust the size as needed */
+    height: 110px; /* Adjust the size as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366; /* WhatsApp green */
+    border-radius: 10px; /* Slightly rounded corners, change to 0 for sharp corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .whatsapp-icon-box img {
+    width: 90px; /* Adjust the icon size as needed */
+    height: 90px; /* Adjust the icon size as needed */
+  }
+  
+
+  /* Footer Separator Line */
+.footer-separator {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff004c, #ffdf00, #ff004c); /* Gradient for neon effect */
+    margin: 40px auto;
+    width: 80%; /* Center the line and make it narrower than the full width */
+    opacity: 0.7; /* Slight transparency */
+  }
+  
+  
+  /* Footer Styles */
+  .footer {
+    background: #0d0d1a;
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .footer h3 {
+    font-size: 1.2rem;
+    color: #ffdf00;
+    margin-bottom: 20px;
+  }
+  
+  .payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .payment-icons img {
+    width: 110px;
+    height: auto;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.3));
+  }
+  
+
+  /* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    height: 60vh; /* Reduce height on smaller screens */
+    background-size: cover;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem; /* Scale down heading */
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  /* WhatsApp Icon */
+  .whatsapp-icon-box {
+    width: 70px; /* Smaller box size on mobile */
+    height: 70px;
+  }
+
+  .whatsapp-icon-box img {
+    width: 50px; /* Smaller icon size on mobile */
+    height: 50px;
+  }
+
+  /* Footer Section */
+  .payment-icons {
+    gap: 20px; /* Reduce spacing between icons */
+  }
+
+  .payment-icons img {
+    width: 70px; /* Smaller icons on mobile */
+  }
+
+  /* Header Text */
+  .header {
+    font-size: 2rem; /* Adjust font size */
+    padding: 10px;
+  }
+
+  .hero-image {
+    height: 50vh;
+    width: 50vh;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-overlay {
+    height: 100%; /* Makes sure the overlay covers hero without creating gaps */
+  }
+
+  .hero-image {
+    height: 50vh;
+    width: 50vh;
+  }
+
+  /* WhatsApp Icon */
+  .whatsapp-icon {
+    top: 85%; /* Adjust position for very small screens */
+  }
+
+  .whatsapp-icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .whatsapp-icon-box img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Footer Icons */
+  .payment-icons img {
+    width: 60px;
+  }
+}
+
+  
