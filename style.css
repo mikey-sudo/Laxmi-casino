@@ -196,7 +196,7 @@
     box-shadow: 0 4px 10px rgba(255, 0, 76, 0.3);
   }
 
-  .whatsapp-icon {
+  .whatsapp-icon, .signup-icon {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -204,28 +204,67 @@
     transition: transform 0.3s;
   }
   
-  .whatsapp-icon.left-icon {
+  /* .whatsapp-icon.left-icon , .signup-icon.left-icon{
     left: 20px;
   }
   
+  .whatsapp-icon.right-icon, .signup-icon.right-icon {
+    right: 20px;
+  } */
+
+  .whatsapp-icon.left-icon {
+    top: 40%;
+    left: 20px;
+  }
+
   .whatsapp-icon.right-icon {
+    top: 40%;
+    right: 20px;
+  }
+
+  .signup-icon.left-icon {
+    top: 60%; /* Lower position for Sign Up button */
+    left: 20px;
+  }
+
+  .signup-icon.right-icon {
+    top: 60%; /* Lower position for Sign Up button */
     right: 20px;
   }
   
-  .whatsapp-icon-box {
-    width: 120px; /* Adjust the size as needed */
-    height: 110px; /* Adjust the size as needed */
+  .whatsapp-icon-box  {
+    width: 120px; 
+    height: 110px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #25D366; /* WhatsApp green */
-    border-radius: 10px; /* Slightly rounded corners, change to 0 for sharp corners */
+    /* background-color: #25D366;  */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+  }
+
+  .whatsapp-icon-box {
+    background-color: #25D366; /* WhatsApp green */
+  }
+
+  .signup-icon-box {
+    background-color: #ff8e00; /* Sign Up background color, you can change as needed */
   }
   
   .whatsapp-icon-box img {
-    width: 90px; /* Adjust the icon size as needed */
-    height: 90px; /* Adjust the icon size as needed */
+    width: 90px; 
+    height: 90px; 
+  }
+
+  .signup-button {
+    font-size: 1.2rem;
+    padding: 20px 20px;
+    background-color: #ffdf00; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
 
