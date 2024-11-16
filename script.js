@@ -1,10 +1,10 @@
 const whatsappNumbers = [
-      '+912391239129',
-      '+910000111789',
-      '+919990022333',
-      '+919999222218',
-      '+913377728289'
-  ];
+      '+918571817306',
+      '+918571817315',
+    //   '+919990022333',
+    //   '+919999222218',
+    //   '+913377728289'
+];
 
   // Function to get a random WhatsApp number and update the link's href attribute
   function getRandomWhatsAppNumber(event) {
