@@ -14,10 +14,13 @@ function getRandomWhatsAppNumber(event) {
     const selectedNumber = whatsappNumbers[randomIndex];
 
     // Predefined message that appears in the chat input when WhatsApp opens
-    const message = encodeURIComponent("Interested in Laxmi Casino");
+    const message = "Join Laxmi Casino";
+
+    // console.log("Generated WhatsApp URL:", `https://wa.me/${selectedNumber}?text=${encodeURIComponent(message)}`);
+
 
     // WhatsApp URL format with predefined message
-    const whatsappURL = `https://wa.me/${selectedNumber}?text=${message}`;
+    const whatsappURL = `https://wa.me/${selectedNumber}?text=${encodeURIComponent(message)}`;
 
     // Open WhatsApp URL in a new tab with the predefined message
     window.open(whatsappURL, '_blank');
